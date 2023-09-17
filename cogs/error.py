@@ -130,11 +130,11 @@ class Error(Base, commands.Cog):
             return
 
         if isinstance(error, commands.UserNotFound):
-            await inter.send(Messages.user_not_found(user=inter.author.mention))
+            await inter.send(Messages.user_not_found.format(user=inter.author.mention), ephemeral=True)
             return
 
         if isinstance(error, commands.MemberNotFound):
-            await inter.send(Messages.member_not_found(member=inter.author.mention))
+            await inter.send(Messages.member_not_found.format(member=inter.author.mention), ephemeral=True)
             return
 
         if isinstance(error, disnake.InteractionTimedOut):
@@ -199,11 +199,11 @@ class Error(Base, commands.Cog):
             return
 
         if isinstance(error, commands.UserNotFound):
-            await inter.send(Messages.user_not_found(user=inter.author.mention))
+            await inter.send(Messages.user_not_found.format(user=inter.author.mention), ephemeral=True)
             return
 
         if isinstance(error, commands.MemberNotFound):
-            await inter.send(Messages.member_not_found(member=inter.author.mention))
+            await inter.send(Messages.member_not_found.format(member=inter.author.mention), ephemeral=True)
             return
 
         if isinstance(error, commands.CommandInvokeError):
